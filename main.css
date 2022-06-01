@@ -1,0 +1,279 @@
+html,body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI',SegoeUI,'Microsoft JhengHei',微軟正黑體,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+/*header*/
+.stickyHeader{
+    position: relative;
+    top:0px;
+    left:80px;
+    width:1525px;
+    height: 60px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size:13px !important;
+}
+.logo{
+    height:40px;
+    width:100px;
+}
+.service{
+    height:60px;
+    width: 550px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.service a{
+    text-decoration: none;
+    color:black;
+}
+.service a span:hover{
+    border-bottom: 2px solid black;
+}
+.container{
+    background-color: rgb(242, 242, 242);
+    position:absolute;                  /*往上找到父原素有設定position根據該父元素的位置去計算，若都沒有就看body*/
+    top:50px;
+    left:255px;
+    transform:scaleY(0);
+    height:300px;
+    width:1230px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;    
+    transform-origin: top;
+    transition:transform .2s ease-in-out;
+    z-index: 5;
+}
+.container ol{
+    list-style: none;
+}
+.container ol>li{
+    margin-top: 10px !important;
+    margin-bottom: 25px !important;
+}
+.container ol li{
+    margin: 20px;
+    font-size:13px;
+}
+#toggler:checked + label .container {
+    transform:scaleY(1);
+    transition: transform .2s ease-in-out;
+}
+.grayFooter{
+    width:1230px;
+    background-color:rgb(230, 230, 230); 
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align:center;
+    position:absolute;
+    bottom:0px;
+    font-size:13px;
+}
+
+
+/*main*/
+
+
+/*slide show*/
+.slideShow{
+    height:575px;
+    width: 1545px;
+    position: relative;
+    left:85px;
+    display: flex;
+    justify-content: space-between;
+}
+.text{
+    width:440px;
+    height:225px;
+    position: absolute;
+    top:50px;
+    left:95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 1;
+}
+.text div:nth-child(1){
+    background-color: rgb(255, 185, 0);
+    height: 28px;
+    width:75px;
+    padding-top:2px;
+    font-size: 15px;
+    font-weight:600;
+    text-align: center;
+}
+.text div:nth-child(2) h1{
+    margin: 0px;
+    font-weight: 600;
+}
+.text div:nth-child(3){
+    width:523px;
+    font-size:15px;
+    font-weight: 400;
+    margin:20px 0px;
+}
+.text div:nth-child(4){
+    height:32px;
+    width:125px;
+    color:white;
+    background-color: black;
+    font-size:15px;
+    font-weight:600;
+    text-align: center;
+    padding-top: 8px;
+}
+.slideShow img{
+    height: 575px;
+    width: 1545px;
+    transform: scaleX(1.0125);
+}
+
+/*choooseService*/
+.chooseService{
+    height:225px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.chooseService span{
+    position: relative;
+}
+.chooseService span img{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height:55px;
+    width:60px;
+}
+.chooseService span:nth-child(1)::after{
+    content: "選擇您的  Microsoft 365";
+    position: absolute;
+    bottom:85px;
+    left:-30px;
+    width:120px;
+    height:25px;
+    text-align: center;
+    font-weight: 600;
+    font-size:15px;
+}
+.chooseService span:nth-child(2)::after{
+    content: "選購Surface裝置";
+    position: absolute;
+    bottom:85px;
+    left:-30px;
+    width:120px;
+    height:25px;
+    text-align: center;
+    font-weight: 600;
+    font-size:15px;
+}
+.chooseService span:nth-child(3)::after{
+    content: "取得Windows11";
+    position: absolute;
+    bottom:85px;
+    left:-30px;
+    width:120px;
+    height:25px;
+    text-align: center;
+    font-weight: 600;
+    font-size:15px;
+}
+
+
+/* section1 */
+.ads{
+    height:440;
+    width:1545px;
+    position: relative;
+    left:85px;
+    display:flex;
+    justify-content: space-between;
+}
+.ads article{
+    position: relative;
+    height:400px;
+    width:365px;
+}
+.ads article img{
+    height:205px;
+    width:365px;
+}
+.AdsText{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 1;
+}
+.AdsText div:nth-child(1){
+    background-color: rgb(255, 216, 0);
+    height: 22px;
+    width:75px;
+    padding-top:5px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.AdsText div:nth-child(3),.AdsText_type2 div:nth-child(2){
+    width:270px;
+    font-size: 15px;;
+    margin-top: 5px;
+}
+.AdsText div:nth-child(4),.AdsText_type2 div:nth-child(3){
+    width:270px;
+    font-size: 15px;
+    color:#005DA6;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* section2 */
+.oneDrive{
+    height: 580px;
+    width:1545px;
+    position:relative;
+    left:85px;
+    margin: 50px 0;
+}
+.oneDrive img{
+    height:575px;
+    width:1545px;
+}
+.textSection2{
+    position: absolute;
+    top:215px;
+    left:90px;
+}
+.oneDrive div:nth-child(1){
+    margin: 0px;
+    font-size:24px;
+    font-weight: 600;
+}
+.oneDrive div:nth-child(2){
+    width:523px;
+    font-size:15px;
+    font-weight: 400;
+    margin:20px 0px;
+}
+.oneDrive div:nth-child(3){
+    height:32px;
+    width:125px;
+    color:white;
+    background-color: black;
+    font-size:15px;
+    font-weight:600;
+    text-align: center;
+    padding-top: 8px;
+}
