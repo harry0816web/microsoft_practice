@@ -82,18 +82,72 @@ html,body{
 
 /*slide show*/
 .slideShow{
+    padding: 0;
     height:575px;
     width: 1545px;
     position: relative;
     left:85px;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+}
+.slides{
+    padding: 0;
+    position: relative;
+    left: 10px;
+    height:575px;
+    width: 1545px;
+    list-style: none;
+    padding: 0;
+    background-color: #eee;
+}
+.slides input{
+    display: none;
+}
+#slide:checked ~ li{
+    transform: translateX(0%);
+    transition: transform .4s ease-in-out;
+}
+#slide2:checked ~ li{
+    transform:translateX(-100%);
+    transition: transform .4s ease-in-out;
+}
+#slide:checked ~ .controlSwitch label:nth-of-type(1){
+    background-color: lightgray;
+}
+#slide2:checked ~ .controlSwitch label:nth-of-type(2){
+    background-color: lightgray;
+}
+.slide{
+    padding: 0;
+    position: absolute;
+    left:0px;
+    height:575px;
+    width: 1545px;
+}
+.slides li:nth-of-type(2){
+    left:100%;   
+}
+.controlSwitch{
+    position: absolute;
+    bottom:20px;
+    width: 100%;
+    text-align: center;
+}
+.controlSwitch label{
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: black 2px solid;
+    z-index: 1000;
 }
 .text{
     width:440px;
     height:225px;
     position: absolute;
-    top:50px;
+    top:150px;
     left:95px;
     display: flex;
     flex-direction: column;
@@ -147,6 +201,7 @@ html,body{
 .chooseService span{
     position: relative;
 }
+
 .chooseService span img{
     margin-top: 60px;
     margin-bottom: 60px;

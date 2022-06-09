@@ -19,7 +19,7 @@
            <a href=""><span>支援</span></a>
         </div>
         <div class="service" style="width:265px;">
-            <a href="">
+            <a href="" id='navBar'>
                 <input type="checkbox" id="toggler" style="display:none">
                 <label for="toggler">
                     所有Microsoft
@@ -70,13 +70,35 @@
     </header>
     <main>
         <div class="slideShow">
-            <div class="text">
-                <div>新上市</div>
-                <div><h1>Surface Pro 8</h1></div>
-                <div>運用更大的13吋觸控螢幕、更快的連線，以及提升的速度，成就更多。現在提供Windows11。</div>
-                <div>深入了解 ></div>
-            </div>
-            <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWKHu9?ver=19af&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=224&s=3000&d=1125&aim=true" alt="">
+            <ul class="slides">
+                <input type="radio" id="slide" name="controller" checked>
+                <input type="radio" id="slide2" name="controller">
+
+                <li class="slide">
+                    <div class="text">
+                        <div>新上市</div>
+                        <div><h1>Surface Pro 8</h1></div>
+                        <div>運用更大的13吋觸控螢幕、更快的連線，以及提升的速度，成就更多。現在提供Windows11。</div>
+                        <div>深入了解 ></div>
+                    </div>
+                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWKHu9?ver=19af&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=224&s=3000&d=1125&aim=true" alt="">
+                </li>
+                <li class="slide">
+                    <div class="text">
+                        <div>新上市</div>
+                        <div><h1>Microsoft 365</h1></div>
+                        <div>進階版Office應用程式、額外的雲端空間、進階安全性等功能，全都在一個方便的訂閱中</div>
+                        <div style="width:150px;">最多可供6人使用 ></div>
+                    </div>
+                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4RJ6W?ver=0809&q=0&m=8&h=472&w=1259&b=%23FFFFFFFF&l=f&x=144&y=350&s=2622&d=983&aim=true" alt="">
+                </li>
+                <div class="controlSwitch">
+                    <label for="slide"></label>
+                    <label for="slide2"></label>
+                </div>
+            </ul>
+            
+            
         </div>
         <div class="chooseService">
             <span><img src="pics/service1.jpeg" alt=""></span>
@@ -98,7 +120,7 @@
         <article>
             <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4FTtq?ver=dae2&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true" alt="">
             <div class="AdsText_type2">
-                <div><h3 style="margin:0px;">Surface Laptop Go</h3></div>
+                <div style="margin-top:35px;"><h3 style="margin:0px;">Surface Laptop Go</h3></div>
                 <div>運用時尚和效能兼具、最輕巧的 Surface 筆記型電腦，善加利用每一天。</div>
                 <div>立即選購  ></div>
             </div>
@@ -115,7 +137,7 @@
         <article>
             <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4Rwnk?ver=0641&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&x=1489&y=247&aim=true" alt="">
             <div class="AdsText_type2">
-                <div><h3 style="margin:0px;">PC Game Pass</h3></div>
+                <div style="margin-top:35px;"><h3 style="margin:0px;">PC Game Pass</h3></div>
                 <div>解鎖 100 多款精彩遊戲和 EA Play，而且首月只需 NT$30。 此優惠僅適用於新訂閱者。</div>
                 <div>立即加入  ></div>
             </div>
@@ -165,7 +187,7 @@
             </div>
         </article>
     </div>
-
+    <script src="jQuery/jQuery 3.6.0.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
